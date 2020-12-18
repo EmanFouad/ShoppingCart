@@ -85,7 +85,7 @@ footer{
 .product-price button{
   text-align: center;
 }
-.product-price button{
+button.primary{
   padding: 0.6rem 1.3rem;
   border: none;
   background-color: #3d185f;
@@ -93,7 +93,7 @@ footer{
   font-weight: 500;
   cursor: pointer;
 }
-.product-price button:hover{
+button.primary:hover{
   background-color: rgb(85, 53, 116);
 }
 /* End Products */
@@ -117,3 +117,57 @@ footer{
   border: 1px solid #3d185f;
 }
 /* End Filter */
+
+/* Start Cart */
+.cart{
+  padding: 1rem 0;
+  margin: 1.8rem 0;
+}
+.cart-header{
+  border-bottom: .1rem solid #ccc;
+}
+.cart-items{
+  width: 100%;
+}
+.cart-items ul{
+  list-style: none;
+  padding: 0;
+}
+.cart-items ul li{
+  display: flex;
+  margin-bottom: 1.2rem;
+}
+.cart-items img{
+  width: 5rem;
+  margin-right: 2rem;
+}
+.cart-items p{
+ font-weight: 600;
+ margin-bottom: 0.6rem;
+}
+.cart-items .info{
+  display: flex;
+  justify-content: space-between;
+}
+.cart-items button{
+  border: none;
+  background-color: #e6e6e6;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+}
+.cart-items button:hover{
+  background-color: #ccc;
+}
+.total{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.total p{
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+.total button{
+  margin-right: 1rem;
+}
+/* End Cart */
