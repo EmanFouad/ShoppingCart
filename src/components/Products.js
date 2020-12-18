@@ -5,7 +5,7 @@ class Products extends Component {
     state = {  }
     
     render() { 
-        const {products} = this.props;
+        const {products,addToCart} = this.props;
         return ( 
             <ul className="products">
                 {products.map(product =>{
@@ -18,7 +18,7 @@ class Products extends Component {
                                 </a>
                                 <div className="product-price">
                                     <div>{formatCurrency(product.price)}</div>
-                                    <button>Add To Cart</button>
+                                    <button className="primary" onClick={()=> addToCart(product)}>Add To Cart</button>
                                 </div>
                             </div>
                         </li>
