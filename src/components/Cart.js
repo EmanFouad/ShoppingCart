@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
 import formatCurrency from './../util';
+import Checkout from './Checkout';
 class Cart extends Component {
-    state = {}
+    state = {showCheckout:false}
     render() {
-        const { cartItems, removeFromCart } = this.props;
+        const { cartItems, removeFromCart ,createOrder } = this.props;
         const cartItemsList = cartItems.map(item => {
             return (
                 <li key={item._id}>
@@ -36,9 +37,10 @@ class Cart extends Component {
                             {formatCurrency(cartItems.reduce((a,c) => a + c.price * c.count , 0))}
                             </p>
                         </div>
-                        <button className="primary">Proceed</button>
+                        <button onClick={() => this.setState({showCheckout:true})} className="primary">Proceed</button>
                     </div>
                 }
+                {this.state.showCheckout && <Checkout cartItems={cartItems} createOrder={createOrder} />}
             </div>
         );
     }
