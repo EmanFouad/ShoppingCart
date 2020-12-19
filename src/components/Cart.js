@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Fade from 'react-reveal/Fade';
 import formatCurrency from './../util';
 import Checkout from './Checkout';
 class Cart extends Component {
@@ -26,9 +27,11 @@ class Cart extends Component {
                 {!cartItems.length ? <div className="cart cart-header">Your Cart is Empty</div> :
                     <div className="cart cart-header">You have {cartItems.length} Items</div>}
                 <div className="cart-items">
-                    <ul>
-                        {cartItemsList}
-                    </ul>
+                    <Fade right cascade>
+                        <ul>
+                            {cartItemsList}
+                        </ul>
+                    </Fade>
                 </div>
                 {cartItems.length !==0 &&
                     <div className="total">

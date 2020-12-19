@@ -72,6 +72,10 @@ footer{
   max-width: 27rem;
   max-height: 27rem;
 }
+.product:hover{
+  transform: scale(1.015);
+  transition: transform .5s ease-in-out;
+}
 .product-price{
   display:flex;
   justify-content: space-between;
@@ -191,16 +195,63 @@ button.primary:hover{
   width: 97%;
   padding: 0.4rem;
 }
-.checkout button{
+button.secondary{
   margin-top: 1rem;
   margin-right: 0.8rem;
-  padding: 0.7rem;
+  padding: 0.6rem 1.3rem;
   background-color: #105f21;
   color: #fff;
   border: none;
   cursor: pointer;
 }
-.checkout button:hover{
-  background-color: #15832d;
+button.secondary:hover{
+  background-color: #127227;
 }
 /* End Checkout */
+/* Start product details */
+.modal-close{
+  display: flex;
+  justify-content: flex-end;
+}
+.modal-close button{
+  background:none;
+  border: none;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+.product-details{
+  display: flex;
+  align-items: center;
+}
+.product-details img{
+  height: 35rem;
+  margin-right: 2rem;
+}
+.product-description .title{
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+.product-description .description{
+ line-height: 1.5;
+  margin-bottom: 1rem;
+}
+.product-description .sizes button{
+  background: none;
+  border: none;
+  background-color: #e6e6e6;
+  padding: 0.5rem 0.8rem;
+  margin: 0 0.3rem;
+  cursor: pointer;
+}
+.product-description .product-price{
+  display: flex;
+  align-items: center;
+}
+.product-description .product-price .price{
+  font-size: 1.6rem;
+  font-weight: 600;
+}
+
+/* End product details */
